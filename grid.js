@@ -24,11 +24,14 @@
 
 		//Calculate margins for gutter effect
 		var totalWidth = $(".example").width();
-		// alert(totalWidth);
+		
 		var totalMargin = (cols - 1) * gutterSize;
-		// alert(totalMargin);
-		var colWidth = (totalWidth - totalMargin) / cols;
-		// alert(colWidth);
+		
+		/* Firefox and Chrome appear to round fractional pixels differently
+			The one extra pixel there prevents the grid from breaking in Firefox
+			and is (hopefully) barely noticable	 */ 
+		var colWidth = ((totalWidth - totalMargin) - 1) / cols;
+
 
 		//push divs to array to save on DOM touches
 		var divs = [];
@@ -102,9 +105,11 @@
 				$(".grid-code").empty().append(html);
 				$(".grid-code-wrap").show();
 				$(".usage-wrap").show();
+				//slow scroll to results
 				$('html, body').animate({
     				scrollTop: $(".grid-code-wrap").offset().top
 				}, 1000);
+				//allow one-click text selection
 				$(".grid-code, .usage").click(function() {
 					var select = $(this).find("code");
 					select = select.attr("id");
@@ -114,7 +119,7 @@
 			},
 
 			error: function() {
-				alert("There was an error");
+				alert("There was an error communicating with the server");
 			}
 		});
 	}
