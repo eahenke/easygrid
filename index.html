@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple Grids</title>
+	<meta charset='utf-8'/>
+	<meta name="author" content="Eric Henke">
+	<title>Easy Grids</title>
+
+	 <link rel="icon" type="image/jpg" href="images/easy-icon.jpg" sizes="64x64">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-	<link href="range.css" rel="stylesheet" type="text/css" />
+	<link href="easygrid.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -13,8 +17,9 @@
 	</div>
 
 	<div class="main-wrap">
-		<h1>Simple CSS Grids</h1>
-		<p>Select the desired number of columns, gutter size and padding size to generate lightweight CSS for a custom grid system</p>
+		<h1>Easy CSS Grids</h1>
+		<h5>Inspired by <a class="credit" href="http://flow.gs">flow.gs</a></h5>
+		<p>Select the desired number of columns, the size of gutters and padding, and space between rows to generate lightweight CSS for a custom grid system</p>
 	</div>
 
 	<div class="controls">
@@ -30,7 +35,7 @@
 		<div class="settings">
 			<p>Select gutter size</p>
 			<div class="slide-wrap">
-				<input name="gutter" class="slider" type="range" value="1.5" min="0" max="3" step="0.25" />
+				<input name="gutter" class="slider" type="range" value="1" min="0" max="3" step="0.25" />
 				<div class="output"></div>
 			</div>
 		</div>
@@ -38,7 +43,15 @@
 		<div class="settings">
 			<p>Select padding size</p>
 			<div class="slide-wrap">
-				<input name="padding" class="slider" type="range" value="0" min="0" max="1" step="0.05" />
+				<input name="padding" class="slider" type="range" value="0.5" min="0" max="1" step="0.05" />
+				<div class="output"></div>
+			</div>
+		</div>
+
+		<div class="settings">
+			<p>Select row gutter size</p>
+			<div class="slide-wrap">
+				<input name="rowGut" class="slider" type="range" value="0.5" min="0" max="1" step="0.05" />
 				<div class="output"></div>
 			</div>
 		</div>
@@ -47,14 +60,17 @@
 
 	<div class="example">
 		<div class="example-wrap">
-			<div class="row">
+			<div class="row row1">
+			</div>
+
+			<div class="row row2">
 			</div>
 
 		</div>
 	</div>
 
 	<div class="submit">
-		<button>Generate code</button>
+		<button>Generate CSS</button>
 	</div>
 
 	<div class="grid-code-wrap">
@@ -66,6 +82,7 @@
 	<div class="usage-wrap">
 		<h2>Example usage</h2>
 		<p>Click below to select the code, and copy it into an HTML file as a skeleton for your page</p>
+
 
 		<div class="usage">
 			<pre>
@@ -96,6 +113,6 @@
 	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="grid.js" type="text/javascript"></script>
+	<script src="js/grid.js" type="text/javascript"></script>
 </body>
 </html>
