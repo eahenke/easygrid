@@ -556,56 +556,64 @@ html {
 }
 
 /* line 89, ../sass/easygrid.scss */
+.credit {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #09AB9C;
+}
+
+/* line 95, ../sass/easygrid.scss */
+.credit:visited {
+  color: #09AB9C;
+}
+
+/* line 99, ../sass/easygrid.scss */
 button {
-  /*background-color: #cdedcd;*/
   width: 150px;
   height: 50px;
   border-radius: 25px;
-  /*color: #419c55;*/
   font-size: 18px;
   font-weight: bold;
 }
 
-/* line 99, ../sass/easygrid.scss */
+/* line 107, ../sass/easygrid.scss */
 .comment {
   color: #757575;
 }
 
-/* line 103, ../sass/easygrid.scss */
+/* line 111, ../sass/easygrid.scss */
 .content {
   color: #000000;
   font-weight: bold;
 }
 
-/* line 108, ../sass/easygrid.scss */
+/* line 116, ../sass/easygrid.scss */
 .controls {
   text-align: center;
 }
 
-/* line 112, ../sass/easygrid.scss */
+/* line 120, ../sass/easygrid.scss */
 div {
   display: block;
 }
 
-/* line 116, ../sass/easygrid.scss */
+/* line 124, ../sass/easygrid.scss */
 .example {
   width: 1280px;
   height: 300px;
   margin: auto;
 }
 
-/* line 122, ../sass/easygrid.scss */
+/* line 130, ../sass/easygrid.scss */
 .example-wrap {
-  /*background-color: #cdedcd;*/
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
 
-/* line 130, ../sass/easygrid.scss */
+/* line 137, ../sass/easygrid.scss */
 .grid-code, .usage {
-  /*background-color: #cdedcd;*/
   width: 70%;
   height: 400px;
   margin: auto;
@@ -613,20 +621,24 @@ div {
   overflow: scroll;
 }
 
-/* line 140, ../sass/easygrid.scss */
+/* line 146, ../sass/easygrid.scss */
 .grid-code-wrap, .usage-wrap {
   display: none;
 }
 
-/*h1, h2, h1 + p, h2 + p  {
-  color: #419c55;
-  text-align: center;
-}*/
-/* line 149, ../sass/easygrid.scss */
+/* line 150, ../sass/easygrid.scss */
+h1 {
+  margin-bottom: 0;
+}
+
+/* line 154, ../sass/easygrid.scss */
+h5 {
+  margin: 0;
+}
+
+/* line 158, ../sass/easygrid.scss */
 .output {
-  /*background-color: #cdedcd;*/
   border-radius: 50%;
-  /*color: #000000;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -635,7 +647,7 @@ div {
   width: 75px;
 }
 
-/* line 161, ../sass/easygrid.scss */
+/* line 168, ../sass/easygrid.scss */
 pre, code {
   text-align: left;
   font-size: 18px;
@@ -646,20 +658,19 @@ pre, code {
   -o-tab-size: 3;
 }
 
-/* line 172, ../sass/easygrid.scss */
+/* line 179, ../sass/easygrid.scss */
 .row {
-  height: 100%;
   width: 100%;
 }
 
 /*override the last margin - fix in js?*/
-/* line 178, ../sass/easygrid.scss */
+/* line 185, ../sass/easygrid.scss */
 .row > div:last-of-type {
   margin-right: 0 !important;
 }
 
 /*Inner div, actual content appearance*/
-/* line 183, ../sass/easygrid.scss */
+/* line 190, ../sass/easygrid.scss */
 .row > div > div {
   margin: 0;
   padding: 0;
@@ -671,29 +682,29 @@ pre, code {
   box-sizing: border-box;
 }
 
-/* line 194, ../sass/easygrid.scss */
+/* line 201, ../sass/easygrid.scss */
 .settings {
   display: inline-block;
   padding: 15px;
 }
 
-/* line 199, ../sass/easygrid.scss */
+/* line 206, ../sass/easygrid.scss */
 .settings p {
   font-size: 1em;
 }
 
-/* line 203, ../sass/easygrid.scss */
+/* line 210, ../sass/easygrid.scss */
 .slide-wrap {
-  width: 300px;
+  width: 250px;
 }
 
-/* line 207, ../sass/easygrid.scss */
+/* line 214, ../sass/easygrid.scss */
 .submit {
   padding: 1em;
   text-align: center;
 }
 
-/* line 212, ../sass/easygrid.scss */
+/* line 219, ../sass/easygrid.scss */
 .warning {
   display: none;
   position: absolute;
@@ -711,7 +722,7 @@ pre, code {
 
 /*--------------------*/
 /*Clearfix*/
-/* line 229, ../sass/easygrid.scss */
+/* line 236, ../sass/easygrid.scss */
 .row:before, .row:after {
   content: "";
   display: table;
@@ -719,7 +730,7 @@ pre, code {
 }
 
 /*Out div, appearance of padding*/
-/* line 236, ../sass/easygrid.scss */
+/* line 243, ../sass/easygrid.scss */
 [class*='col-'] {
   float: left;
   background-color: #a0dba0;
