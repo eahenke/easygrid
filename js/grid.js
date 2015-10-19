@@ -5,6 +5,7 @@
 		initialize();
 		$("[type=range]").change(initialize);
 		$("button").click(generate);
+		$('.close').click(close);
 
 	});
 
@@ -64,10 +65,15 @@
 
 		if(inner.width() <= 0) {
 			$(inner).width(0);
-			$(".warning").show();
+			$(".warning").removeClass('hidden')
 		} else {
-			$(".warning").hide();
+			// $(".warning").addClass('hidden');
 		}		
+	}
+
+	function close(event) {
+		event.preventDefault();
+		$(".warning").addClass('hidden');
 	}
 
 	function output() {
